@@ -10,8 +10,8 @@ export const ProfileCard = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: #d3eeeeb0;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--mainBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
 `;
 
 export const ProfileDescription = styled.div`
@@ -27,27 +27,27 @@ export const ProfileImg = styled.img`
   margin-left: auto;
   margin-bottom: 15px;
   width: 150px;
- 
+
   border-radius: 50%;
-  box-shadow: inset -2px -2px 5px #ffffff, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
-  `;
+  box-shadow: var(--insetBoxShadow);
+`;
 
 export const ProfileUserName = styled.p`
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: 700;
-  color: #448585;
+  color: var(--textColor);
 `;
 
 export const ProfileTag = styled.p`
   margin-bottom: 10px;
   font-weight: 500;
-  color: #448585;
+  color: var(--textColor);
 `;
 
 export const ProfileLocation = styled.p`
   font-weight: 500;
-  color: #448585;
+  color: var(--textColor);
 `;
 
 export const ProfileStats = styled.ul`
@@ -71,20 +71,30 @@ export const ProfileStatsItem = styled.li`
 
   width: 100%;
 
-  background-color: #bce8e8;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--itemBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
+  cursor: pointer;
+
+  transition-property: transform, box-shadow;
+  transition-duration: var(--transitionDuration);
+  transition-timing-function: var(--cubic);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--transformShadow);
+  }
 `;
 
 export const ProfileStatsLable = styled.span`
   margin-bottom: 10px;
 
   font-weight: 500;
-  color: #448585;
-  text-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  color: var(--textColor);
+  text-shadow: var(--mainBoxShadow);
 `;
 
 export const ProfileStatsQuantity = styled.span`
   font-weight: 700;
-  color: black;
-  text-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  color: var(--secondaryTextColor);
+  text-shadow: var(--mainBoxShadow);
 `;

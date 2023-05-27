@@ -11,8 +11,8 @@ export const List = styled.ul`
   align-items: center;
   gap: 10px;
 
-  background-color: #d3eeeeb0;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--itemBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
 `;
 
 export const ListItem = styled.li`
@@ -24,8 +24,19 @@ export const ListItem = styled.li`
 
   width: 280px;
 
-  background-color: #bce8e8;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--itemBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
+  
+  cursor: pointer;
+
+  transition-property: transform, box-shadow;
+  transition-duration: var(--transitionDuration);
+  transition-timing-function: var(--cubic);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--transformShadow);
+  }
 `;
 
 export const ListItemStatOnline = styled.div`
@@ -53,6 +64,6 @@ export const ListItemImg = styled.img`
 export const ListItemName = styled.p`
   font-size: 20px;
   font-weight: 500;
-  color: #448585;
-  text-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  color: var(--textColor);
+  text-shadow: var(--mainBoxShadow);
 `;

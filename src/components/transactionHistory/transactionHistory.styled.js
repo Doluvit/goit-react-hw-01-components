@@ -6,8 +6,8 @@ export const Table = styled.table`
 
   width: 340px;
 
-  background-color: #d3eeeeb0;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--mainBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
 `;
 
 export const TableHead = styled.thead`
@@ -16,8 +16,8 @@ export const TableHead = styled.thead`
   width: 100%;
   display: block;
 
-  background-color: #bce8e8;
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--itemBackgroundColor);
+  box-shadow: var(--mainBoxShadow);
 `;
 
 export const TableHeadRow = styled.tr`
@@ -31,8 +31,8 @@ export const TableHeadRow = styled.tr`
 export const TableHeadCell = styled.th`
   font-weight: 700;
   font-size: 18px;
-  color: #448585;
-  text-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  color: var(--textColor);
+  text-shadow: var(--mainBoxShadow);
   text-align: center;
 `;
 
@@ -48,7 +48,17 @@ export const TableBodyRow = styled.tr`
   align-items: center;
   justify-content: center;
 
-  box-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--mainBoxShadow);
+  cursor: pointer;
+
+  transition-property: transform, box-shadow;
+  transition-duration: var(--transitionDuration);
+  transition-timing-function: var(--cubic);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--transformShadow);
+  }
 `;
 
 export const TableBodyCell = styled.td`
@@ -56,9 +66,9 @@ export const TableBodyCell = styled.td`
   flex-basis: 33.333%;
 
   font-weight: 500;
-  color: black;
+  color: var(--secondaryTextColor);
 
   text-align: left;
   font-size: 14px;
-  text-shadow: -2px -2px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: var(--mainBoxShadow);
 `;

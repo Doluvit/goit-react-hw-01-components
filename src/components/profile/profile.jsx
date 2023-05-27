@@ -13,8 +13,6 @@ import {
 } from './profile.styled'; 
 
 
-
-
 export const Profile = ({ username, avatar, tag, location, stats }) => (
   <ProfileCard>
     <ProfileDescription>
